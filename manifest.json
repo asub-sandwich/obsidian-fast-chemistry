@@ -1,11 +1,10 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "fast-chemistry",
+	"name": "Fast Chemistry",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "Allows for quick use of Chemical Equations plugin through katex using @...@ or @@...@@ syntax",
+	"author": "Adam Subora",
+	"authorUrl": "https://github.com/asub-sandwich",
 	"isDesktopOnly": false
 }
