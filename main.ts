@@ -20,8 +20,6 @@ export default class FastChemPlugin extends Plugin {
 	settings: FastChemSettings;
 
 	async onload() {
-		console.log("Fast Chemistry plugin loaded");
-
 		await this.loadSettings();
 
 		this.addCommand({
@@ -40,12 +38,6 @@ export default class FastChemPlugin extends Plugin {
 				if (!update.docChanged) return;
 				if (!update.view.hasFocus) return;
 
-				// const hasUserInput = update.transactions.some((tr) => {
-				// 	const ev = tr.annotation(EditorView.userEvent);
-				// 	return ev === "input" || ev === "input.type";
-				// });
-				// if (!hasUserInput) return;
-
 				let insertedText = "";
 				for (const tr of update.transactions) {
 					tr.changes.iterChanges((_fA, _tA, _fB, _tB, inserted) => {
@@ -59,9 +51,7 @@ export default class FastChemPlugin extends Plugin {
 		);
 	}
 
-	onunload() {
-		console.log("Fast Chem plugin unloaded");
-	}
+	onunload() {}
 
 	async loadSettings() {
 		this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
@@ -206,12 +196,8 @@ class FastChemSettingTab extends PluginSettingTab {
 	display(): void {
 		const {containerEl} = this;
 		containerEl.empty();
-		containerEl.createEl("h2", {
-			text: "Fast Chemistry settings",
-		});
-
 		new Setting(containerEl)
-			.setName("Automatic expansion on typing")
+			.setName("Automatic expansion")
 			.setDesc(
 				"When enabled, typing the closing @ triggers expansion"
 			)
