@@ -1,7 +1,7 @@
 {
 	"id": "fast-chemistry",
 	"name": "Fast Chemistry",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"minAppVersion": "0.15.0",
 	"description": "Allows for quick use of Chemical Equations plugin through katex using @...@ or @@...@@ syntax",
 	"author": "Adam Subora",
