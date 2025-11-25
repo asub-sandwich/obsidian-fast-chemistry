@@ -24,7 +24,7 @@ export default class FastChemPlugin extends Plugin {
 
 		this.addCommand({
 			id: "expand-chem-shorthand",
-			name: "Expand Chem Shorthand (@, @@)",
+			name: "Expand chem shorthand",
 			editorCallback: (editor: Editor) => {
 				this.expandChemInEditor(editor);
 			},
@@ -199,7 +199,7 @@ class FastChemSettingTab extends PluginSettingTab {
 		new Setting(containerEl)
 			.setName("Automatic expansion")
 			.setDesc(
-				"When enabled, typing the closing @ triggers expansion"
+				"When enabled, typing the closing '@' triggers expansion."
 			)
 			.addToggle((toggle) =>
 				toggle
